@@ -136,11 +136,8 @@ std::vector<std::vector<Object>> GroupbyName(const std::vector<Object>& objects)
         int Index = FirstLetter - L'А';
 
         if (FirstLetter == L'Ё')
-        {
             groups[6].push_back(obj);
-            continue;
-        }
-         if (iswupper(FirstLetter) && FirstLetter >= L'А' && FirstLetter <= L'Я')
+        else if (iswupper(FirstLetter) && FirstLetter >= L'А' && FirstLetter <= L'Я')
         {
             if (Index < 6)
                 groups[FirstLetter - L'А'].push_back(obj);
